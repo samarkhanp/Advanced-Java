@@ -1,0 +1,3 @@
+Name: button.class
+Java-Bean: True
+Manifest-Version: 1.0
