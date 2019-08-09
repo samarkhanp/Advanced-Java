@@ -1,3 +1,4 @@
+    
 /*
 <applet code="Key" width=300 height=400>
 </applet>
@@ -13,15 +14,16 @@ implements KeyListener
 {
 	int X=20,Y=30,x=200,y=200;
 	String msg="KeyEvents--->";
-Image a;
+Image a,b;
 	public void init()
 	{
 		addKeyListener(this);
 		requestFocus();
-		setBackground(Color.green);
-		setForeground(Color.blue);
-
-		a=getImage(getDocumentBase(),"Desert.jpg");
+		
+		
+		b=getImage(getDocumentBase(),"roadg.gif");
+		
+		a=getImage(getDocumentBase(),"car2.png");
 	}
 	public void keyPressed(KeyEvent k)
 	{
@@ -59,6 +61,9 @@ Image a;
 	public void paint(Graphics g)
 	{
 		g.drawString(msg,X,Y);
+		
+		g.drawImage(b,0,0,this);
+
 		g.drawImage(a,x,y,this);
 	}
 }
